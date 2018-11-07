@@ -8,13 +8,15 @@ def init():
     time_text.set_text("")
     return line,
 def animate(i):
-    x = datos[0,:]
-    y = datos[i,0:]
+    x = data_x
+    y = data_y[i,:]
     line.set_data(x,y)
-    time_text.set_text("$t\ =\ %f$" %datos[i,0])
+    time_text.set_text("$t\ =\ %f$" %data_y[i,0])
     return line,
 
 datos = np.loadtxt("datos.txt")
+data_x = datos[0,:]
+data_y = datos[1:,:]
 
 fig = plt.figure()
 
