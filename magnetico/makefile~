@@ -1,0 +1,5 @@
+solucion : solucion.o vectores.o
+	cc solucion.o vectores.o -lm -o solucion
+
+clean:
+	rm -f *.o 
